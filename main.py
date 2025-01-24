@@ -16,7 +16,7 @@ import pandas as pd
 
 def scrape_places_links(query):
     # Inisialisasi WebDriver
-    service = Service("./chromedriver.exe")
+    service = Service("./chromedriver")
     driver = webdriver.Chrome(service=service)
 
     def visit_google_maps():
@@ -93,7 +93,7 @@ def convert_timestamp_to_iso_date(timestamp):
 def scrape_place(link):
     try:
         # Inisialisasi WebDriver
-        service = Service("./chromedriver.exe")
+        service = Service("./chromedriver")
         driver = webdriver.Chrome(service=service)
 
         print(f"Mengunjungi link: {link}")
