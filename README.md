@@ -27,3 +27,31 @@ Google Maps Scraper adalah alat otomatisasi berbasis Python yang dirancang untuk
    ```bash
    git clone https://github.com/iwangunawan313/gmap.git
    cd gmap
+
+
+2. **Install Dependencis**
+   ```bash
+   pip install -r requirements.txt
+   
+3. **Jalankan Scraper**
+   ```bash
+   python main.py
+
+Hasil Scraping Data akan diekspor ke folder output dengan format query.xlsx. Contoh: warung bakso cirebon.xlsx.
+
+⚙️ Konfigurasi Opsional
+Blokir Gambar & CSS Anda dapat mengaktifkan fitur blokir gambar dan CSS untuk mempercepat scraping. Pastikan opsi ini sudah diatur dalam main.py.
+
+4. **Menggunakan Proxy Tambahkan proxy pada chrome_options:**
+   ```bash
+   chrome_options.add_argument("--proxy-server=http://your-proxy-address:port")
+  
+📌 Catatan Penting
+Gunakan scraping secara bertanggung jawab dan patuhi kebijakan Google.
+Jangan lakukan scraping secara agresif untuk menghindari pemblokiran.
+
+🤝 Kontribusi
+Kontribusi sangat diterima! Silakan ajukan pull request atau buka issue untuk ide pengembangan lebih lanjut.
+
+📜 Lisensi
+Proyek ini dilisensikan di bawah MIT License.
