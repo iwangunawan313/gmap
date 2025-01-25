@@ -112,25 +112,14 @@ def scrape_place(link):
         # Ekstrak data
         title = driver.find_element(By.CSS_SELECTOR, 'h1').text if driver.find_elements(By.CSS_SELECTOR, 'h1') else None
         address = driver.find_element(By.CSS_SELECTOR, "button[data-item-id='address']").text if driver.find_elements(By.CSS_SELECTOR, "button[data-item-id='address']") else None
-        rating = driver.find_element(By.CSS_SELECTOR, "div.F7nice > span").text if driver.find_elements(By.CSS_SELECTOR, "div.F7nice > span") else None
-
-        reviews_text = driver.find_element(By.CSS_SELECTOR, "div.F7nice > span:last-child").text if driver.find_elements(By.CSS_SELECTOR, "div.F7nice > span:last-child") else None
-        reviews = int(''.join(filter(str.isdigit, reviews_text))) if reviews_text else None
-
         website = driver.find_element(By.CSS_SELECTOR, "a[data-item-id='authority']").get_attribute('href') if driver.find_elements(By.CSS_SELECTOR, "a[data-item-id='authority']") else None
-
-        phone_element = driver.find_elements(By.XPATH, "//button[starts-with(@data-item-id,'phone')]")
-        phone = phone_element[0].get_attribute("data-item-id").replace("phone:tel:", "") if phone_element else None
 
         driver.quit()
 
         return {
             "title": title,
             "address": address,
-            "phone": phone,
             "website": website,
-            "reviews": reviews,
-            "rating": rating,
             "link": link,
         }
 
