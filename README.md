@@ -2,6 +2,12 @@
 
 Google Maps Scraper adalah alat otomatisasi berbasis Python yang dirancang untuk mengambil data dari Google Maps, seperti tautan lokasi, informasi bisnis, dan nomor kontak. Proyek ini cocok untuk kebutuhan pengumpulan data lokasi secara efisien.
 
+<p align="center">
+  <a href="https://gitpod.io/#https://github.com/iwangunawan313/gmap">
+    <img alt="Run in Gitpod" src="https://gitpod.io/button/open-in-gitpod.svg" />
+  </a>
+</p>
+
 ## 🎯 Fitur Utama
 
 - **Scrape Lokasi Bisnis**: Mengambil tautan lokasi dari hasil pencarian Google Maps.
